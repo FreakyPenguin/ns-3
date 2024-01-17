@@ -191,6 +191,7 @@ E2EOnOffApp::E2EOnOffApp(const E2EConfig& config) : E2EApplication(config, "ns3:
     config.SetFactoryIfContained<UintegerValue, unsigned>(m_factory, "PacketSize", "PacketSize");
     config.SetFactoryIfContained<StringValue, std::string>(m_factory, "OnTime", "OnTime");
     config.SetFactoryIfContained<StringValue, std::string>(m_factory, "OffTime", "OffTime");
+    m_application = m_factory.Create<Application>();
 }
 
 E2EMsgGenerator::E2EMsgGenerator(const E2EConfig& config)
